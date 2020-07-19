@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const keys = require('../config/keys');
 
-mongoose.connect("mongodb://127.0.0.1/task-manager-api", {
+const mongo_url = keys.mongoURI;
+mongoose.connect(mongo_url, {
     useNewUrlParser: true,
     useCreateIndex: true
 });
